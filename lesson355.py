@@ -5,6 +5,9 @@ class Kettle(object):
         self.price = price
         self.on = False
 
+    def switch_on(self):
+        self.on = True
+
 
 kenwood = Kettle("Kenwood", 9.99)
 print(kenwood.make)
@@ -27,5 +30,17 @@ Method: a function defined in a class.
 Attribute: A variable bound to an instance of a class.
 """
 
+print(hamilton.on)
+hamilton.switch_on()
+print(hamilton.on)
 
+Kettle.switch_on(kenwood)
+print(kenwood.on)
+kenwood.switch_on()
+
+print('*'*80)
+
+kenwood.power = 1.5
+print(kenwood.power)
+#print(hamilton.power)
 
